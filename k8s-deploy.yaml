@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8sd
+  name: k8s
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: k8sd
+      app: k8s
   template:
     metadata:
       labels:
-        app: k8sd
+        app: k8s
     spec:
       containers:
-        - name: k8sd
-          image: barkurguru/k8sd
+        - name: k8s
+          image: barkurguru/k8s
           ports:
             - containerPort: 8060
